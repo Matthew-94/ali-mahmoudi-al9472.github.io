@@ -1,0 +1,29 @@
+:root {
+  --md-text-font: "Source Sans 3", system-ui, sans-serif;
+}
+
+/* Readable line length */
+.md-content__inner { max-width: 46rem; }
+
+/* Profile photo */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  border: 3px solid var(--md-primary-fg-color);
+}
+@media (max-width: 600px) {
+  .profile-photo { float: none; display: block; margin: 0 auto 1rem; }
+}
+
+/* Publication entries */
+.pub { margin-bottom: 1.2rem; padding-left: .8rem; border-left: 3px solid var(--md-primary-fg-color); }
+.pub .me { font-weight: 700; }
+
+/* Visible focus for keyboard users (accessibility) */
+a:focus-visible, button:focus-visible { outline: 3px solid var(--md-accent-fg-color); outline-offset: 2px; }
+
+@media print { .md-header, .md-tabs, .md-footer { display: none; } }
